@@ -62,3 +62,17 @@ CREATE TABLE high_volume_trips (
         CHECK (is_rush_hour_trip IN (0, 1))
 );
 
+CREATE INDEX idx_trips_pickup_time
+    ON high_volume_trips(pickup_time);
+
+CREATE INDEX idx_trips_pickup_zone
+    ON high_volume_trips(pickup_zone_id);
+
+CREATE INDEX idx_trips_dropoff_zone
+    ON high_volume_trips(dropoff_zone_id);
+
+CREATE INDEX idx_trips_zone_and_time_composite
+    ON high_volume_trips(pickup_zone_id, pickup_time);
+
+CREATE INDEX idx_zones_spatial_map
+    ON nyc_taxi_zones USING GIST(map_boundary);
