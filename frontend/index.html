@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movedata</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Who's moving in NYC?</h1>
+        <p>Check taxi patterns, trip metrics and spatial boundaries. </p>
+        <p>Dont miss the Knicks parade! </p>
+
+    </header>
+
+    <div class="dashboard-grid">
+        
+        <aside class="sidebar">
+            <div class="filter-group">
+                <label for="boroughFilter">Filter By Borough</label>
+                <select id="boroughFilter">
+                    <option value="">All Boroughs</option>
+                    <option value="Manhattan">Manhattan</option>
+                    <option value="Brooklyn">Brooklyn</option>
+                    <option value="Queens">Queens</option>
+                    <option value="Bronx">Bronx</option>
+                    <option value="Staten Island">Staten Island</option>
+                </select>
+            </div>
+            
+            <div class="filter-group">
+                <label for="metricFilter">Sort Data By</label>
+                <select id="metricFilter">
+                    <option value="trip_distance">Trip Distance</option>
+                    <option value="trip_duration_mins">Trip Duration</option>
+                    <option value="average_speed_mph">Average Speed</option>
+                    <option value="tip_percentage">Tip Percentage</option>
+                </select>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            
+            <section class="panel">
+                <h2>Zones Map</h2>
+                <div id="map">
+                    </div>
+            </section>
+
+            <section class="panel">
+                <h2> Trip Database Aggregations</h2>
+                <div id="status" class="status-message">Select a borough to load streaming rows...</div>
+                
+                <div class="table-responsive">
+                    <table id="dataTable">
+                        <thead>
+                            <tr>
+                                <th>Pickup Location</th>
+                                <th>Dropoff Location</th>
+                                <th>Distance (mi)</th>
+                                <th>Duration (mins)</th>
+                                <th>Avg Speed (mph)</th>
+                                <th>Tip Percentage</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tableBody">
+                            </tbody>
+                    </table>
+                </div>
+            </section>
+
+        </main>
+    </div>
+<script src="script.js"></script>
+</body>
+</html>
