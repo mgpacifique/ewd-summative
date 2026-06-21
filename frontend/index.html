@@ -10,11 +10,18 @@
 </head>
 <body>
 
+    <nav class="navbar">
+        <div class="nav-brand">Movedata NYC</div>
+        <ul class="nav-links">
+            <li><a href="#map-section">Zones Map</a></li>
+            <li><a href="#eda-section">EDA Findings</a></li>
+            <li><a href="#data-section">Live Data</a></li>
+        </ul>
+    </nav>
+
     <header>
         <h1>Who's moving in NYC?</h1>
-        <p>Check taxi patterns, trip metrics and spatial boundaries. </p>
-        <p>Dont miss the Knicks parade! </p>
-
+        <p>Check taxi patterns, trip metrics and spatial boundaries. Don't miss the Knicks parade!</p>
     </header>
 
     <div class="dashboard-grid">
@@ -45,14 +52,31 @@
 
         <main class="main-content">
             
-            <section class="panel">
+            <section id="map-section" class="panel">
                 <h2>Zones Map</h2>
-                <div id="map">
-                    </div>
+                <div id="map"></div>
             </section>
 
-            <section class="panel">
-                <h2> Trip Database Aggregations</h2>
+            <div id="eda-section" class="charts-grid">
+                <section class="panel chart-panel">
+                    <h2>Hypothesis A: Speed vs Tip</h2>
+                    <p class="hypothesis-desc"><strong>Conclusion:</strong> The custom Pearson correlation algorithm returned an <em>r</em>-value of -0.0080. Because this value is extremely close to 0, we <strong>Fail to Reject the Null Hypothesis</strong>. This means that in NYC, the average speed of a taxi ride (traffic congestion) has virtually no impact on the tip percentage. Passengers tend to tip their standard rate (often the 20% credit card default) regardless of whether they are moving quickly or stuck in gridlock.</p>
+                    <div class="canvas-container">
+                        <canvas id="speedTipChart"></canvas>
+                    </div>
+                </section>
+                
+                <section class="panel chart-panel">
+                    <h2>Hypothesis B: Speed by Borough</h2>
+                    <p class="hypothesis-desc">This chart highlights the severe impact of dense urban congestion. Trips originating in outer boroughs like Staten Island and Queens maintain significantly higher average speeds compared to Manhattan.</p>
+                    <div class="canvas-container">
+                        <canvas id="boroughSpeedChart"></canvas>
+                    </div>
+                </section>
+            </div>
+
+            <section id="data-section" class="panel">
+                <h2>Trip Database Aggregations</h2>
                 <div id="status" class="status-message">Select a borough to load streaming rows...</div>
                 
                 <div class="table-responsive">
@@ -68,13 +92,14 @@
                             </tr>
                         </thead>
                         <tbody id="tableBody">
-                            </tbody>
+                        </tbody>
                     </table>
                 </div>
             </section>
 
         </main>
     </div>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script src="script.js"></script>
 </body>
 </html>

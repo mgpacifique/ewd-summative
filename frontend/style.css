@@ -10,13 +10,17 @@
 body {
     background-color: #0a0a0a; 
     color: #e2e8f0;           
-    padding: 20px;
+    padding: 90px 20px 20px; /* Increased top padding for fixed navbar */
     max-width: 1400px;
     margin: 0 auto;            
     display: flex;             
     flex-direction: column;    
     min-height: 100vh;
     overflow-x: hidden;        
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 
@@ -200,4 +204,86 @@ tr:hover td {
     #map {
         height: 350px; 
     }
+    
+    .charts-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .nav-links {
+        display: none; /* simple mobile fallback */
+    }
+}
+
+/* =========================================
+   NEW: Navbar, Charts, and Descriptions
+   ========================================= */
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #0a0a0a;
+    border-bottom: 2px solid #333;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+.nav-brand {
+    font-size: 20px;
+    font-weight: 700;
+    color: #fbbf24;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #a3a3a3;
+    font-weight: 600;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: color 0.2s ease-in-out;
+}
+
+.nav-links a:hover {
+    color: #fbbf24;
+}
+
+.charts-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    width: 100%;
+}
+
+.hypothesis-desc {
+    font-size: 14px;
+    color: #a3a3a3;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    padding: 15px;
+    background: #1e1e1e;
+    border-left: 4px solid #4ade80;
+    border-radius: 4px;
+}
+
+.chart-panel:first-child .hypothesis-desc {
+    border-left-color: #fbbf24; /* Yellow for Hypothesis A */
+}
+
+.canvas-container {
+    width: 100%;
+    position: relative;
+    height: 300px;
 }
