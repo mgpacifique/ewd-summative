@@ -284,8 +284,8 @@ or launch the frontend through the configured development server.
 # Dashboard Screenshots
 
 ## Main Dashboard
+<img width="1354" height="630" alt="Screenshot 2026-06-22 164402" src="https://github.com/user-attachments/assets/20bda6a1-d3d4-4363-98ec-2ea34af77c43" />
 
-[INSERT DASHBOARD SCREENSHOT]
 
 ## Interactive Map
 
@@ -309,7 +309,7 @@ Add project walkthrough link here:
 
 # Team Members
 
-* Brian — Database Architecture
+* MagyeraND — Database Architecture
 * Pacifique — Backend Development & ETL
 * Miracle — Deployment Engineer & Documentation Lead
 * Credo Hedrick Iranzi — Frontend Developer
