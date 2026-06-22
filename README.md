@@ -311,7 +311,7 @@ Add project walkthrough link here:
 
 * Brian — Database Architecture
 * Pacifique — Backend Development & ETL
-* Miracle — Algorithm Documentation & Technical Report
+* Miracle — Deployment Engineer & Documentation Lead
 * Credo Hedrick Iranzi — Frontend Developer
 
 ---
