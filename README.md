@@ -312,7 +312,7 @@ Add project walkthrough link here:
 * Brian — Database Architecture
 * Pacifique — Backend Development & ETL
 * Miracle — Algorithm Documentation & Technical Report
-* Frontend Developer — Dashboard Development
+* Credo Hedrick Iranzi — Frontend Developer
 
 ---
 
