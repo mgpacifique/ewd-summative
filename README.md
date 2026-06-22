@@ -289,11 +289,13 @@ or launch the frontend through the configured development server.
 
 ## Interactive Map
 
-[INSERT MAP SCREENSHOT]
+<img width="953" height="542" alt="Screenshot 2026-06-22 190430" src="https://github.com/user-attachments/assets/5d2e108c-a9e9-447e-973b-33f88624e395" />
+
 
 ## Analytics Page
 
-[INSERT ANALYTICS SCREENSHOT]
+<img width="1352" height="593" alt="WhatsApp Image 2026-06-22 at 7 11 25 PM" src="https://github.com/user-attachments/assets/eecc93aa-a3fd-4344-a8e1-8351cc2bc376" />
+
 
 ---
 
