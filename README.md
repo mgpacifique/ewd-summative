@@ -308,6 +308,15 @@ https://vimeo.com/1203597343?share=copy&fl=sv&fe=ci
 
 ---
 
+# Team Task sheets (Google Sheet)
+
+```text
+https://docs.google.com/spreadsheets/d/1m9sMGlsCMGDBu2yGMQ2QlsNltyiYcU76mwJOC0fGT80/edit?usp=sharing
+
+```
+
+---
+
 # Team Members
 
 * MagyeraND — Database Architecture
