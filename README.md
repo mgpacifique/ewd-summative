@@ -301,10 +301,9 @@ or launch the frontend through the configured development server.
 
 # Video Walkthrough
 
-Add project walkthrough link here:
-
 ```text
-[INSERT VIDEO LINK]
+https://vimeo.com/1203597343?share=copy&fl=sv&fe=ci
+
 ```
 
 ---
